@@ -15,7 +15,7 @@ const Search = ({filterCollections}) => {
     return (
         <>
         <form className="search-bar" onSubmit={handleSubmit}>
-            <input type="search" placeholder="Search for artist, title, ..." id="search__input" onChange={handleChange}></input>
+            <input type="search" placeholder="Search for artist or title" id="search__input" onChange={handleChange}></input>
             <input type="submit" value="Search" className="search__submit"/>
         </form>
         </>
