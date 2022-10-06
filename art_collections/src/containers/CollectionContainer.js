@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import CollectionList from "../components/CollectionList"
+import Footer from "../components/Footer"
 import Header from "../components/Header"
 import Search from "../components/Search"
 
@@ -55,6 +56,7 @@ const CollectionContainer = () => {
             <Header />
             <Search filterCollections={filterCollections} />
             <CollectionList collections={filteredCollections.length > 0 ? filteredCollections : collections} />
+            <Footer />
         </>
     )
 }

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom"
+import Footer from "../components/Footer"
 import Header from "../components/Header"
 
 const GalleryContainer = () => {
@@ -21,11 +22,7 @@ const GalleryContainer = () => {
 					</p>
 				</section>
 			</main>
-			<footer className="gallery-container-footer">
-				<h2>Sign up</h2>
-				<button>Sign Up</button>
-			</footer>
-
+			<Footer />
 		</>
    )
 }
