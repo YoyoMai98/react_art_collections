@@ -1,3 +1,49 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .App {
   text-align: center;
+}
+
+.gallery-container-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(32, 33, 59);
+  color: aliceblue;
+}
+
+.welcome-section {
+  height: 800px;
+  width: 100%;
+  background-image: url(/src/images/boulevard-montmartre-at-night.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-section p {
+  margin: 0;
+  color: aliceblue;
+}
+
+.collection-section{
+  height: 600px;
+  width: 100%;
+  background-image: url(/src/images/LE-PALAIS-CONTARINI.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.collection-section h3 {
+  margin: 0;
+  color: aliceblue;
+}
+
+.gallery-container-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(32, 33, 59);
+  color: aliceblue;
 }
