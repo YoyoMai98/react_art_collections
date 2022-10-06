@@ -155,3 +155,53 @@ a {
   border: 0.1px solid rgb(50, 51, 89, 0.5);
   background-color: rgb(227, 229, 239);
 }
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  background: url(/src/images/boulevard-montmartre-at-night.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  padding-left: 120px;
+  padding-right: 120px;
+  color: #c5d0ed;
+  font-weight: 600;
+}
+
+.sign-up-p {
+  font-size: 20px;
+  color: #c5d0ed;
+  font-weight: 600;
+}
+
+.sign-up-form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-form label {
+  margin: 5px;
+}
+
+.sign-up-form input {
+  width: 50%;
+  margin-top: 10px;
+}
+
+#subscribe-btn {
+  width: 20%;
+  height: 2em;
+  font-size: 16px;
+  font-weight: 550;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: rgb(50, 51, 89);
+  border: 0.1px solid rgb(50, 51, 89, 0.5);
+  background-color: rgb(227, 229, 239);
+}
