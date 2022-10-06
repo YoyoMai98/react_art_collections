@@ -1,6 +1,6 @@
 # Art Collections Website
 
-A mini project for showing art collections, using [Harvard Art Museums API](https://github.com/harvardartmuseums/api-docs).
+A mini project for showing art collections, using [The Metropolitan Museum of Art Collection API](https://metmuseum.github.io/).
 
 ## Wireframe
 

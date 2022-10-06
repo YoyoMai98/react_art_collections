@@ -7,6 +7,7 @@ import Search from "../components/Search"
 const CollectionContainer = () => {
 
     const [collectionsId, setCollectionsId] = useState([])
+    const [totalNumber, setTotalNumber] = useState(0)
     const [collections, setCollections] = useState([])
     const [filteredCollections, setFilteredCollections] = useState([])
 
@@ -14,6 +15,7 @@ const CollectionContainer = () => {
         const response = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects")
         const data = await response.json()
         setCollectionsId(data.objectIDs)
+        setTotalNumber(data.total)
     }
 
     const fetchCollection = async id => {
@@ -39,8 +41,8 @@ const CollectionContainer = () => {
         setFilteredCollections(filtered)
     }
 
+    console.log(collectionsId);
     console.log(collections);
-    console.log(filteredCollections)
     console.log("---");
 
     useEffect(() => {
@@ -48,8 +50,8 @@ const CollectionContainer = () => {
     }, [])
 
     useEffect(() => {
-        if(collectionsId.length > 0) fetchAllCollections()
-    }, [collectionsId])
+        if(collectionsId.length === totalNumber && totalNumber > 0) fetchAllCollections()
+    }, [collectionsId, totalNumber])
 
     return (
         <>
