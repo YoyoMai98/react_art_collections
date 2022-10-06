@@ -14,7 +14,6 @@ console.log(collections)
             {collections ? (
                 collectionComponents
             ) : <p>Loading...</p>}
-            {/* {collectionComponents} */}
         </div>
     )
 }

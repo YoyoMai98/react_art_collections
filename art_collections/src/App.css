@@ -12,10 +12,16 @@ a {
 
 .gallery-container-header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgb(32, 33, 59);
   color: aliceblue;
+  padding: 15px;
+}
+
+#header-title {
+  font-size: 1.8em;
+  font-weight: 600;
 }
 
 .gallery-container-header a {
@@ -101,4 +107,23 @@ a {
 .collections-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.collection {
+  padding: 10px;
+}
+
+.collection a {
+  color: rgb(32, 33, 59);
+  cursor: pointer;
+}
+
+.collection img {
+  width: 100%;
+  padding: 10px;
+}
+
+.collection p {
+  font-size: 15px;
+  margin: 5px;
 }

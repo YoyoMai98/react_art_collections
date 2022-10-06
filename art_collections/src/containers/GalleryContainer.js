@@ -1,11 +1,11 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import CollectionContainer from "./CollectionContainer"
 
 const GalleryContainer = () => {
    return (
-    <BrowserRouter>
+		<>
 			<header className="gallery-container-header">
-					<h1>Art Gallery</h1>
+					<Link to="/" id="header-title">Art Gallery</Link>
 					<Link to="/collections">Collections</Link>
 			</header>
 			<main>
@@ -29,10 +29,7 @@ const GalleryContainer = () => {
 				<button>Sign Up</button>
 			</footer>
 
-			<Routes>
-				<Route path="/collections" element={<CollectionContainer />}/>
-			</Routes>
-    </BrowserRouter>
+		</>
    )
 }
 
