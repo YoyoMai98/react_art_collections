@@ -1,9 +1,12 @@
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import CollectionContainer from "./CollectionContainer"
+
 const GalleryContainer = () => {
    return (
-    <>
+    <BrowserRouter>
 			<header className="gallery-container-header">
 					<h1>Art Gallery</h1>
-					<h3>Collection</h3>
+					<Link to="/collections">Collections</Link>
 			</header>
 			<main>
 				<section className="welcome-section">
@@ -15,7 +18,9 @@ const GalleryContainer = () => {
 				<section className="collection-section">
 					<h3>Wanna see some collections?</h3>
 					<p className="text">
-						<button>See All Collections</button>
+						<Link to="/collections">
+							<button>See All Collections</button>
+						</Link>
 					</p>
 				</section>
 			</main>
@@ -23,7 +28,11 @@ const GalleryContainer = () => {
 				<h2>Sign up</h2>
 				<button>Sign Up</button>
 			</footer>
-    </>
+
+			<Routes>
+				<Route path="/collections" element={<CollectionContainer />}/>
+			</Routes>
+    </BrowserRouter>
    )
 }
 
