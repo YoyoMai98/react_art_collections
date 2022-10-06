@@ -7,11 +7,16 @@ const GalleryContainer = () => {
 			</header>
 			<main>
 				<section className="welcome-section">
-					<p>Welcome, feel free to dive yourself to the art world!</p>
+					<div className="intro-welcome">
+						<h2>Welcome</h2>
+						<p>Feel free to dive yourself to the art world!</p>
+					</div>
 				</section>
 				<section className="collection-section">
-					<h3>Collections</h3>
-					<button>See All Collections</button>
+					<h3>Wanna see some collections?</h3>
+					<p className="text">
+						<button>See All Collections</button>
+					</p>
 				</section>
 			</main>
 			<footer className="gallery-container-footer">
