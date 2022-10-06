@@ -3,16 +3,23 @@ import './App.css';
 import GalleryContainer from './containers/GalleryContainer';
 import CollectionContainer from './containers/CollectionContainer';
 import SignUpForm from './components/SignUpForm';
-import Account from './components/Account';
 
 function App() {
+
+  const registeredAccount = account => {
+    alert(`
+      Congrats ${account.lastName}, you have successfully registered!
+    `)
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<GalleryContainer />}/>
 				<Route path="/collections" element={<CollectionContainer />}/>
-        <Route path='/signup' element={<SignUpForm />} />
-        <Route path='/account' element={<Account />} />
+        <Route path='/signup' element={
+        <SignUpForm registeredAccount={registeredAccount}/>
+        } />
 			</Routes>
     </BrowserRouter>
   );
