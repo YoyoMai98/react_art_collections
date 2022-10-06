@@ -7,7 +7,6 @@ const Header = () => {
 			<Link to="/" id="header-title">Art Gallery</Link>
 			<div className="header-right">
                 <Link to="/collections">Collections</Link>
-                <Link to="/account">Account</Link>
             </div>
 		</header>
         </>
