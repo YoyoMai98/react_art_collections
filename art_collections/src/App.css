@@ -27,6 +27,10 @@ a {
   color: aliceblue;
 }
 
+.header-right a {
+  margin-left: 10px;
+}
+
 .welcome-section {
   height: 800px;
   width: 100%;

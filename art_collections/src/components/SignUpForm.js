@@ -2,41 +2,62 @@ import { useState } from "react"
 import Footer from "./Footer"
 import Header from "./Header"
 
-const SignUpForm = () => {
+const SignUpForm = ({registeredAccount}) => {
 
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
+    const [newAccount, setNewAccount] = useState({
+        firstName: "",
+        lastName: "",
+        email: ""
+    })
 
-    const handleFirstName = e => {
-        setFirstName(e.target.value)
-    }
-
-    const handleLastName = e => {
-        setLastName(e.target.value)
-    }
-
-    const handleEmail = e => {
-        setEmail(e.target.value)
+    const handleChange = e => {
+        const propertyName = e.target.name
+        const savedAccount = {...newAccount}
+        savedAccount[propertyName] = e.target.value
+        setNewAccount(savedAccount)
     }
 
     const handleSubmit = e => {
         e.preventDefault()
+        registeredAccount(newAccount)
+        setNewAccount({
+            firstName: "",
+            lastName: "",
+            email: ""
+        })
     }
 
     return (
         <>
             <Header />
-            <div className="sign-up">
+            <div className="sign-up" onSubmit={handleSubmit}>
                 <p className="sign-up-p">Sign up here!</p>
                 <form className="sign-up-form">
                     <label htmlFor="first-name">First Name</label>
-                    <input type="text" id="fname" onChange={handleFirstName}/>
+                    <input
+                        type="text"
+                        id="fname"
+                        onChange={handleChange} 
+                        value={newAccount.firstName}
+                        name="firstName"
+                    />
                     <label htmlFor="last-name">Last Name</label>
-                    <input type="text" id="lname" onChange={handleLastName} />
+                    <input
+                        type="text"
+                        id="lname"
+                        onChange={handleChange}
+                        value={newAccount.lastName}
+                        name="lastName"
+                    />
                     <label htmlFor="email">Email</label>
-                    <input type="email" id="email" onChange={handleEmail} />
-                    <input type="submit" value="Subscribe" id="subscribe-btn" onSubmit={handleSubmit} />
+                    <input
+                        type="email"
+                        id="email"
+                        onChange={handleChange}
+                        value={newAccount.email}
+                        name="email"
+                    />
+                    <input type="submit" value="Subscribe" id="subscribe-btn"/>
                 </form>
             </div>
             <Footer />
