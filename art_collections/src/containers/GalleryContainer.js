@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom"
-import CollectionContainer from "./CollectionContainer"
+import Header from "../components/Header"
 
 const GalleryContainer = () => {
    return (
 		<>
-			<header className="gallery-container-header">
-					<Link to="/" id="header-title">Art Gallery</Link>
-					<Link to="/collections">Collections</Link>
-			</header>
+			<Header />
 			<main>
 				<section className="welcome-section">
 					<div className="intro-welcome">

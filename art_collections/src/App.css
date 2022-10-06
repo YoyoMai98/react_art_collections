@@ -1,13 +1,10 @@
 body {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
-}
-
-.App {
-  text-align: center;
 }
 
 .gallery-container-header {
@@ -17,6 +14,7 @@ a {
   background-color: rgb(32, 33, 59);
   color: aliceblue;
   padding: 15px;
+  
 }
 
 #header-title {
@@ -111,6 +109,8 @@ a {
 
 .collection {
   padding: 10px;
+  margin: 10px;
+  text-align: center;
 }
 
 .collection a {
