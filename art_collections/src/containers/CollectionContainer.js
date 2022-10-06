@@ -9,8 +9,6 @@ const CollectionContainer = () => {
     const fetchCollectionsNumber = async () => {
         const response = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects")
         const data = await response.json()
-        console.log(data)
-        console.log(data.objectIDs)
         setCollectionsId(data.objectIDs)
     }
 
@@ -20,10 +18,10 @@ const CollectionContainer = () => {
         return data
     }
 
-    const fetchAllCollections = () => {
+    const fetchAllCollections = async () => {
         let newCollections = []
-        for(let i = 1; i < 100; i++){
-            fetchCollection(collectionsId[i]).then(collection => {
+        for(let i = 12000; i < 12200; i++){
+            await fetchCollection(collectionsId[i]).then(collection => {
                 newCollections.push(collection)
                 setCollections(newCollections)
             })

@@ -1,9 +1,10 @@
 const Collection = ({collection}) => {
     return (
-        <>
-            <h4>{collection.title}</h4>
-            {/* <img src={collection.objectURL} alt={collection.title} /> */}
-        </>
+        <div className="collection">
+            <a href={collection.objectURL}>{collection.title}</a>
+            <p>Department: {collection.department}</p>
+            {collection.artistDisplayName? <p>Artist: {collection.artistDisplayName}</p> : <p></p>}
+        </div>
     )
 }
 
