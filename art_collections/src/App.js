@@ -11,9 +11,6 @@ function App() {
   const [account, setAccount] = useState()
 
   const registeredAccount = account => {
-    alert(`
-      Congrats ${account.lastName}, you have successfully registered!
-    `)
     setAccount(account)
   }
 

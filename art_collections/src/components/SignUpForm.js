@@ -1,8 +1,11 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Footer from "./Footer"
 import Header from "./Header"
 
 const SignUpForm = ({registeredAccount}) => {
+
+    const navigate = useNavigate()
 
     const [newAccount, setNewAccount] = useState({
         firstName: "",
@@ -25,6 +28,7 @@ const SignUpForm = ({registeredAccount}) => {
             lastName: "",
             email: ""
         })
+        navigate("/account")
     }
 
     return (

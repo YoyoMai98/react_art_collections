@@ -14,7 +14,7 @@ const CollectionContainer = () => {
     const fetchCollectionsNumber = async () => {
         const response = await fetch("https://collectionapi.metmuseum.org/public/collection/v1/objects")
         const data = await response.json()
-        setCollectionsId(data.objectIDs)
+        setCollectionsId(data.objectIDs.sort(function(a, b){return a - b}))
         setTotalNumber(data.total)
     }
 
