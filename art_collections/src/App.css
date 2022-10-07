@@ -328,6 +328,29 @@ a {
   .account h3 {
     font-size: 20px;
   }
+
+  .collections-list {
+    font-size: 15px;
+  }
+
+  .collections-list p {
+    font-size: 13px;
+  }
+
+  .collections-list-btn {
+    height: 80px;
+  }
+  
+  .collections-list-text {
+    font-size: 16px;
+  }
+  
+  .display-btn {
+    width: 25%;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 550;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -366,6 +389,26 @@ a {
 
   .collections-list {
     grid-template-columns: 1fr 1fr;
+    font-size: 13px;
+  }
+
+  .collections-list p {
+    font-size: 12px;
+  }
+
+  .collections-list-btn {
+    height: 60px;
+  }
+  
+  .collections-list-text {
+    font-size: 12px;
+  }
+  
+  .display-btn {
+    width: 20%;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 500;
   }
 
   .gallery-container-footer h2 {
