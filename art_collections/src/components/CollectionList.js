@@ -39,7 +39,7 @@ const CollectionList = ({collections}) => {
             ) : <p className="hidden"></p>}
         </div>
         <div className="collections-list-btn">
-            <p className="collections-list-text">You've viewed {halfLength} of {collections.length} collections</p>
+            <p className="collections-list-text">You've viewed {clicked? collections.length : halfLength} of {collections.length} collections</p>
             <button onClick={handleClick} className={clicked ? "hidden-btn" : "display-btn"}>See more</button>
         </div>
         </>

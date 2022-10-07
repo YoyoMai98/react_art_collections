@@ -39,6 +39,7 @@ const CollectionContainer = () => {
             return collection.title.toLowerCase().includes(term.toLowerCase()) || collection.artistDisplayName.toLowerCase().includes(term.toLowerCase())
         })
         setFilteredCollections(filtered)
+        if(term === "") setFilteredCollections([])
     }
 
     useEffect(() => {
