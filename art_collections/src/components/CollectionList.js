@@ -3,21 +3,23 @@ import Collection from "./Collection"
 
 const CollectionList = ({collections}) => {
 
-    const firstCollections = collections.filter((collection, index) => index <= 50)
-    const secondCollections = collections.filter((collection, index) => index > 50)
+    const halfLength = Math.round(collections.length / 2)
+
+    const firstCollections = collections.filter((collection, index) => index <= halfLength)
+    const secondCollections = collections.filter((collection, index) => index > halfLength)
 
     const [clicked, setClicked] = useState(false)
 
     const collectionComponents = firstCollections.map(collection => {
         return <Collection
-                key={collection.id}
+                key={collection.objectID}
                 collection={collection}
                 />
     })
 
     const loadingCommponents = secondCollections.map(collection => {
         return <Collection
-                key={collection.id}
+                key={collection.objectID}
                 collection={collection}
                 />
     })
@@ -37,7 +39,7 @@ const CollectionList = ({collections}) => {
             ) : <p className="hidden"></p>}
         </div>
         <div className="collections-list-btn">
-            <p className="collections-list-text">You've viewed {firstCollections.length} of {collections.length} collections</p>
+            <p className="collections-list-text">You've viewed {halfLength} of {collections.length} collections</p>
             <button onClick={handleClick} className={clicked ? "hidden-btn" : "display-btn"}>See more</button>
         </div>
         </>

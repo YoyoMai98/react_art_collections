@@ -26,7 +26,7 @@ const CollectionContainer = () => {
 
     const fetchAllCollections = async () => {
         let newCollections = []
-        for(let i = 12010; i < 12110; i++){
+        for(let i = 12017; i < 12117; i++){
             await fetchCollection(collectionsId[i]).then(collection => {
                 newCollections.push(collection)
                 setCollections(newCollections)
@@ -40,10 +40,6 @@ const CollectionContainer = () => {
         })
         setFilteredCollections(filtered)
     }
-
-    console.log(collectionsId);
-    console.log(collections);
-    console.log("---");
 
     useEffect(() => {
         fetchCollectionsNumber()
