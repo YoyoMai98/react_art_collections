@@ -140,6 +140,10 @@ a {
   cursor: pointer;
 }
 
+.display-btn:hover{
+  box-shadow: 2px 2px rgb(50, 51, 89, 0.5);
+}
+
 .hidden-btn {
   display: none;
 }
@@ -189,6 +193,11 @@ a {
   font-weight: 400;
   border: 0.1px solid rgb(50, 51, 89, 0.5);
   background-color: transparent;
+  cursor: pointer;
+}
+
+.search__submit:hover {
+  box-shadow: 2px 2px rgb(50, 51, 89, 0.5);
 }
 
 .sign-up {
