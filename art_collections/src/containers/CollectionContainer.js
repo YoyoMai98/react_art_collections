@@ -26,7 +26,7 @@ const CollectionContainer = () => {
 
     const fetchAllCollections = async () => {
         let newCollections = []
-        for(let i = 12000; i < 12050; i++){
+        for(let i = 12010; i < 12110; i++){
             await fetchCollection(collectionsId[i]).then(collection => {
                 newCollections.push(collection)
                 setCollections(newCollections)

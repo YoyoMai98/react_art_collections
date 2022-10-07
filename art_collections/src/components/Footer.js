@@ -5,7 +5,7 @@ const Footer = () => {
         <>
         <footer>
             <div className="gallery-container-footer">
-				<h2>Do you wanna here more? Sign up for emails!</h2>
+				<h2>Do you wanna hear more? Sign up for emails!</h2>
 				<Link to='/signup'>
                     <button>Sign Up</button>
                 </Link>

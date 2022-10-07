@@ -114,6 +114,36 @@ a {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.hidden {
+  display: none;
+}
+
+.collections-list-btn {
+  width: 100%;
+  height: 100px;
+  padding-bottom: 20px;
+}
+
+.collections-list-text {
+  font-size: 18px;
+}
+
+.display-btn {
+  width: 30%;
+  height: 50px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 0.1px solid rgb(50, 51, 89, 0.5);
+  color: rgb(50, 51, 89);
+  font-size: 18px;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+.hidden-btn {
+  display: none;
+}
+
 .collection {
   padding: 10px;
   margin: 0 10px;
